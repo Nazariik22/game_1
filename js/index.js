@@ -7,7 +7,10 @@ const game = {
     matrix: document.getElementsByClassName('matrix')[0],
     right: document.getElementsByClassName('button_right')[0],
     bottom: document.getElementsByClassName('button_bottom')[0],
+    res: document.getElementById('res'),
+    result: [],
     static(state, element) {
+        this._info();
         element.innerHTML = '';
         for (let i = 0; i < state.length; i++) {
             let section = document.createElement('section');
@@ -25,6 +28,21 @@ const game = {
 
         }
     },
+    _res() {
+        this.res.textContent = this.result.reduce((sum, e) => sum + e);
+    },
+    _info() {
+        for (let row = 0; row < stateMatrix[this.newValue].length; row++) {
+            for (let col = 0; col < stateMatrix[this.newValue][row].length; col++) {
+                if (stateMatrix[this.newValue][row][col] !== data.matrix[row][col]) {
+                    return 0
+                }
+            }
+        }
+        this.result[this.newValue] = 1;
+        this._res();
+        this._buttonRender(stateMatrix.length);
+    },
     _buttonRender(params) {
         this.newValue < params - 1
             ? this.newValue += 1
@@ -32,7 +50,6 @@ const game = {
         this.static(
             stateMatrix[this.newValue],
             this.example);
-        console.log(this.newValue)
     },
     _button(state, element) {
         state.forEach(item => {
@@ -59,6 +76,9 @@ const game = {
             this.matrix);
     },
     render() {
+        for (let index = 0; index < stateMatrix.length; index++) {
+            this.result.push(0)
+        }
         this.static(
             stateMatrix[this.newValue],
             this.example)

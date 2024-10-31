@@ -1,6 +1,13 @@
 const stateMatrix = [
     [
         [2, 2, 2, 2, 2,],
+        [2, 2, 2, 2, 2,],
+        [2, 2, 2, 2, 2,],
+        [2, 2, 2, 2, 2,],
+        [2, 2, 2, 2, 2,],
+    ],
+    [
+        [2, 2, 2, 2, 2,],
         [1, 2, 2, 2, 2,],
         [1, 1, 2, 2, 2,],
         [1, 1, 1, 2, 2,],
@@ -20,19 +27,35 @@ const stateMatrix = [
         [2, 2, 2, 1, 2,],
         [2, 1, 1, 1, 2,],
     ],
+
     [
-        [2, 2, 1, 2, 2,],
-        [1, 1, 1, 1, 1,],
+        [2, 1, 2, 1, 2,],
+        [2, 1, 2, 1, 2,],
         [2, 1, 1, 1, 2,],
+        [2, 2, 2, 1, 2,],
+        [2, 2, 2, 1, 2,],
+    ],
+    [
+        [1, 2, 1, 2, 1,],
+        [2, 2, 2, 2, 2,],
+        [1, 2, 1, 2, 1,],
+        [2, 2, 2, 2, 2,],
+        [1, 2, 1, 2, 1,],
+    ],
+
+    [
+        [1, 1, 1, 1, 1,],
+        [1, 2, 1, 2, 1,],
+        [1, 1, 1, 1, 1,],
         [2, 1, 2, 1, 2,],
         [2, 1, 2, 1, 2,],
     ],
     [
         [1, 2, 2, 2, 1,],
+        [1, 1, 2, 1, 1,],
+        [2, 2, 2, 2, 2,],
+        [1, 1, 2, 1, 1,],
         [1, 2, 2, 2, 1,],
-        [1, 1, 1, 1, 1,],
-        [2, 1, 1, 1, 2,],
-        [2, 1, 2, 1, 2,],
     ],
 ]
 const data = {
@@ -43,19 +66,19 @@ const data = {
         [0, 0, 0, 0, 0,],
         [0, 0, 0, 0, 0,],
     ],
-    btnLeft:[
-        {img:"./img/p.png",right:false},
-        {img:"./img/p.png",right:false},
-        {img:"./img/p.png",right:false},
-        {img:"./img/p.png",right:false},
-        {img:"./img/p.png",right:false},
+    btnLeft: [
+        { img: "./img/p.png", right: false },
+        { img: "./img/p.png", right: false },
+        { img: "./img/p.png", right: false },
+        { img: "./img/p.png", right: false },
+        { img: "./img/p.png", right: false },
     ],
-    btnRight:[
-        {img:"./img/p.png",right:true},
-        {img:"./img/p.png",right:true},
-        {img:"./img/p.png",right:true},
-        {img:"./img/p.png",right:true},
-        {img:"./img/p.png",right:true},
-    ]
+    btnRight: [
+        { img: "./img/p.png", right: true },
+        { img: "./img/p.png", right: true },
+        { img: "./img/p.png", right: true },
+        { img: "./img/p.png", right: true },
+        { img: "./img/p.png", right: true },
+    ],
 }
 export { stateMatrix, data }
